@@ -19,20 +19,20 @@ class MainWindow(QMainWindow):
         self.connect_events()
 
     def init_vars(self):
-        self.motore_on=QPixmap("img/button1.png")
-        self.motore_off=QPixmap("img/button0.png")
-        self.stato_motore=0
+        self.motor_on=QPixmap("img/button1.png")
+        self.motor_off=QPixmap("img/button0.png")
+        self.stato_motor=0
 
     def connect_events(self):
-        self.ui.pulsante.clicked.connect(self.button_clicked)
+        self.ui.button.clicked.connect(self.button_clicked)
 
     def button_clicked(self, *args):
-        self.stato_motore=1-self.stato_motore
-        print("motore=",self.stato_motore)
-        if self.stato_motore==0:
-            self.ui.motore.setPixmap(self.motore_off)
+        self.stato_motor=1-self.stato_motor
+        print("motor=",self.stato_motor)
+        if self.stato_motor==0:
+            self.ui.motor.setPixmap(self.motor_off)
         else:
-            self.ui.motore.setPixmap(self.motore_on)
+            self.ui.motor.setPixmap(self.motor_on)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

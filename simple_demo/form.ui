@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pulsante">
+   <widget class="QPushButton" name="button">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Struca</string>
+     <string>Power</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="check">
@@ -40,7 +40,7 @@
      <string>CheckBox</string>
     </property>
    </widget>
-   <widget class="QLabel" name="motore">
+   <widget class="QLabel" name="motor">
     <property name="geometry">
      <rect>
       <x>110</x>
