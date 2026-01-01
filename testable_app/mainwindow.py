@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
     # NOTE: bug introduced on purpose
     def on_dec_clicked(self):
         if self.number>0:
-            self.number=-1
+            self.number-=1
         self.updateButtonLabel()
 
     def on_inc_clicked(self):

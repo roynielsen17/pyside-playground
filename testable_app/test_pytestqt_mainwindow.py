@@ -25,3 +25,17 @@ def test_dec_button(qtbot,widget):
     assert widget.ui.lbl_number.text()=="41"
     assert "background-color: red" in widget.ui.lbl_number.styleSheet()
 
+@pytest.mark.xfail
+def test_bad_inc_button(qtbot,widget):
+    # click in the + button and make sure it updates the numeric label
+    qtbot.mouseClick(widget.ui.btnInc, qt_api.QtCore.Qt.MouseButton.LeftButton)
+    assert widget.ui.lbl_number.text()=="45" == "expected"
+    assert "background-color: red" in widget.ui.lbl_number.styleSheet()
+
+@pytest.mark.xfail
+def test_bad_dec_button(qtbot,widget):
+    # click in the - button and make sure it updates the numeric label
+    qtbot.mouseClick(widget.ui.btnDec, qt_api.QtCore.Qt.MouseButton.LeftButton)
+    assert widget.ui.lbl_number.text()=="31" == "expected"
+    assert "background-color: red" in widget.ui.lbl_number.styleSheet()
+
